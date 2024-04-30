@@ -1,0 +1,91 @@
+JB10823 DevOps 30th April, Class1, Introduction to DevOps
+=========================================================
+
+> Education background > Btech, ECE
+> IT experience, Manual testing, 5+2 yrs
+> Total experience
+
+DevOps
+======
+> Father of DevOps: Patrick Dubois
+
+> What is DevOps?
+Improvment in Software system is reffered as DevOps
+
+>What is Improvement?
+So, System is changing, and we need to adopt the changes is referred as Improvement.
+
+100 yrs back[India to US]
+Ship> 3-6 Months
+Now> Flight > 24 hrs
+
+Capture Photo with hight
+1) Person, flight, camera : 10000$
+2) Drone: 500$
+
+Improvement are in 3 categaries-
+1) Cost improvement
+2) Quality improvement
+3) Time to market improvement
+
+reffered as DevOps
+
+DevOps[Theory] vs DevOps Tools[Practical implementation]
+=========================================================
+
+DevOps tools are the practical implementation of DevOps
+Docker, K8s, Terraform, packer, Cloud[Introduction], Ansible, Monitoring, SRE, GIT, Jenkins, maven, AzureDevOps, DevSecOps, Sonarcloud, CICD
+
+
+Duration: 30 Classes
+
+This is totally practical course
+
+Lab setup for Playground
+========================
+Step1: login to https://killercoda.com/login
+
+Step2: Login with google
+
+Step3: Click on Playground > Ubuntu single node server
+
+
+Creating account in GitHub
+==========================
+Step1: Click on link https://github.com/
+
+Step2: Click on signup
+
+Creating account in AWS cloud
+=============================
+Step1: https://portal.aws.amazon.com/billing/signup#/start/email
+
+Step2: https://docs.aws.amazon.com/accounts/latest/reference/welcome-first-time-user.html
+
+Design Thinking
+===============
+Problem: I am not having money with me?
+
+Please understand problem with root, and provide best solution to solve the problem.[Referred as Design Thinking]
+
+Study Matarial
+==============
+Step1) Click on https://github.com/JanbaskDevops/studyMatarial 
+
+Step2) Your would be seeing on Greencloud tab in screen <code>
+
+Step3) Click on Download as ZIP
+
+Step4) Please don't explore the material, we will advise you.
+
+
+Homework:
+=========
+1) https://www.youtube.com/watch?v=_r0VX-aU_T8 Watch the design thinking Video.
+
+2) Create account in AWS
+Step1: https://portal.aws.amazon.com/billing/signup#/start/email
+Step2: https://docs.aws.amazon.com/accounts/latest/reference/welcome-first-time-user.html
+
+
+
