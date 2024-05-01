@@ -1,0 +1,118 @@
+JB10823 DevOps 1st May, Class2, Application Deployment, packer and Terraform
+=============================================================================
+Application: Application is a peace of code that solve some problem.
+
+Spring pet clinic:
+=================
+> Here they have clinic for pet and plants for day basis
+> They have specialized doctors who take care of pets and plants
+
+
+Development of spring pet clinic
+================================
+Development Team develop the application, and provide the deployment steps.
+
+[link] > https://github.com/spring-projects/spring-petclinic
+
+Spring Petclinic is a Spring Boot application built using Maven or Gradle. You can build a jar file and run it from the command line (it should work just as well with Java 17 or newer):
+
+git clone https://github.com/spring-projects/spring-petclinic.git
+cd spring-petclinic
+./mvnw package
+java -jar target/*.jar
+
+You can then access the Petclinic at http://localhost:8080/.
+
+Teams
+======
+1) Server: It's a place where we would be running our application.[we will get with killer koda]
+
+2) Provisioning: When we are installing any software in top of operating system is known provisioning.
+
+2.1)How to check java is installed or not?
+ubuntu $ java --version
+
+2.2)Before installing any software we should update our repository
+    apt-get update
+    apt install openjdk-17-jre-headless
+
+"apt-get update" updates the local package index, fetching the latest package lists from the repositories specified in /etc/apt/sources.list or files in /etc/apt/sources.list.d/
+
+Do you want to continue? [Y/n]
+
+
+Command 'java' not found, but can be installed with:
+
+apt install openjdk-11-jre-headless  # version 11.0.20.1+1-0ubuntu1~20.04, or
+apt install default-jre              # version 2:1.11-72
+apt install openjdk-16-jre-headless  # version 16.0.1+9-1~20.04
+apt install openjdk-17-jre-headless  # version 17.0.8.1+1~us1-0ubuntu1~20.04
+apt install openjdk-8-jre-headless   # version 8u382-ga-1~20.04.1
+apt install openjdk-13-jre-headless  # version 13.0.7+5-0ubuntu1~20.04
+
+
+3) Dependancy: it's like pre work for installing any software
+
+ubuntu $ ./mvnw package
+Error: JAVA_HOME is not defined correctly.
+  We cannot execute 
+
+
+How I get server?
+with the help of killerkoda
+
+Background of unix and Linux and flavor of linux
+=================================================
+in 1950 > communication was unidirection
+
+Scintist developed UNICS software[written in B and low level programming language] to convert unidirection communication to bi-direction
+
+With the help UNICS they have written a new programming language[rewrite B] they have given the name C programming.
+
+with C they have rewritten UNICS for user purpose known as UNIX
+
+Unix is a base operating system, we need to install application in top of unix to intract with it that is reffered as Linux
+
+Linux= Unix + application
+
+Now, their are multiple IT companies created their own Linux environment
+
+1) ubuntu
+2) Fadora
+3) Centos
+4) IBM-i
+5) Redhat
+
+[JIRA]
+======
+JIRA is a project management ticketing tool, where would be raising ticket against any parties
+userstory
+EPIC
+Bug
+
+Problem with application deployment
+===================================
+1) Server is temporary, and it can be down at any time.
+
+2) Autoscalling in not possible
+       Example: 1 server support 100 user
+                now, requirement is 10000 user > 100 similar server
+
+Now, you need a enterprise solution to run your application.
+
+1) Running application in data center.
+======================================
+Datacenter is a location where you would be having all the resources required for application[Compute, storage, networking and database]
+
+If you want to setup datacenter it required very high cost, alternative is cloud
+
+
+2) Running application in cloud.
+================================
+Running your application on someone else data center, and paying rent to them.
+
+
+Homework
+========
+JIRA[Please goto chatgpt and search for JIRA PPT's and explore them]
+AWS
