@@ -1,0 +1,129 @@
+Class3: Introduction to cloud and Golden Image
+
+BareMetal server
+Cloud
+Availability zone
+Regions
+Compute, networking, storage, database
+AMI
+Terraform and packer installation
+IAM
+Public key
+Private key
+
+
+BareMetal server
+================
+Server where are not having any software installed is known as baremetal server. in our study we will make baremetal as reference.
+
+Whenever you run any command to check version, you mostly see output in below formate
+
+<MajorRelease>.<minorRelease>.<fixpack>
+
+ubuntu $ git --version
+git version 2.25.1
+
+ubuntu $ docker --version
+Docker version 24.0.5, build 24.0.5-0ubuntu1~20.04.1
+
+By default we would be having few software installed to our system like git and docker in case of killerkode.
+
+Deployment step for Spring pet clinic
+
+git clone https://github.com/spring-projects/spring-petclinic.git
+cd spring-petclinic
+./mvnw clean package -DskipTests
+java -jar target/*.jar
+
+So, now to deploy our application we need to follow below steps
+
+1) Choose baremetal server of your choice.
+
+2) Install required software[provisining]
+
+3) run the deployment command
+
+Ubuntu server setup # 1 Minute
+Installing GIT # apt-get update ; apt install git -y, 30 seconds
+Installing java # apt install openjdk-11-jre-headless, 30 seconds
+Application deploymemt command # 5 minutes
+
+Note: sudo su - > command make me admin for my process.# we will see this in live in next 30 minutes
+
+Autoscalling:
+=============
+Suppose my server can server 1000 users, and I want to 
+
+serve 3000 users then I need to add 2 more server.
+serve 10000 users then I need to add 7 more server.
+serve 30000 users then I need to add 20 more server.
+serve 50000 users then I need to add 20 more server.
+serve 80000 users then I need to add 30 more server.
+serve 100 users then I need to remove 79 more server.
+
+Problem statement with autoscaling: When we autoscale our application, I need to wait appox 6 minutes.
+
+How I can reduce this 6 minutes to less then 1 seconds
+======================================================
+reducing 1 minutes> golden image
+reducing 5 minutes > docker
+
+Installing terraform and packer[please follow killerkode]
+=========================================================
+Link: https://developer.hashicorp.com/terraform/install
+
+
+Golden image
+============
+A "golden image" typically refers to a pre-configured template used to create or deploy identical virtual machines (VMs) or systems. It's essentially a snapshot of a fully configured operating system, including all necessary software, settings, and configurations. This image serves as a blueprint for consistent and efficient deployment across multiple environments.
+
+Organizations often use golden images in scenarios where they need to deploy numerous instances of the same system configuration, such as in cloud computing environments, virtualized infrastructures, or when setting up standardized workstations. By using a golden image, they can ensure consistency, reduce deployment time, and minimize errors that might occur during manual setup.
+
+However, it's crucial to keep golden images updated regularly to incorporate security patches, software updates, and configuration changes to maintain system integrity and compliance.
+
+Step1) created baremetal server by ubuntu image
+
+Step2) Install java 11
+root@ip-172-31-24-70:~# java --version
+openjdk 11.0.23 2024-04-16
+OpenJDK Runtime Environment (build 11.0.23+9-post-Ubuntu-1ubuntu1)
+OpenJDK 64-Bit Server VM (build 11.0.23+9-post-Ubuntu-1ubuntu1, mixed mode, sharing)
+
+Step3) Now, let me create image[Golden image] from my instance
+Currently creating AMI ami-0e66bc36cbe769b96 from instance i-08d5c021631f4c35c. Check that the AMI status is 'Available' before deleting the instance or carrying out other actions related to this AMI.
+
+Step4) Create server with you AMI, and you would see java is already installed.
+
+
+AMI
+===
+it's OS image [or] golden image
+
+
+Cloud
+=====
+Cloud is browser based application by which we can net IT software resources.
+
+1) Compute
+2) Networking
+3) Database
+4) Storage
+
+Availbility zone:
+
+Regions: It's like Amazon data center.
+
+Availability zone
+
+IAM: Identity and access management, it used to create user
+====
+Public key and Private key
+==========================
+These are like username and password to work on CLI
+
+Homework: What is Golden image, and create notes on it.
+
+
+
+
+
