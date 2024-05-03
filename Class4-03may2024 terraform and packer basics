@@ -1,0 +1,135 @@
+Class4: vi editor, IAM, Access Key, Secrate key, Packer, and how to create AMI with packer
+==========================================================================================
+
+
+Problem with Golden image that we have created yesterday
+========================================================
+
+1) Whenever we are installing any software, we need to have licence file, and even meta data.
+
+2) Whenever their is any change, we need to have golden image.[Need to create golden image with latest configuration]
+
+
+To solve this problem we need to create image with pipeline.
+
+1) Baseimage: It is a latest image of base software.
+
+2) Builder: It is the component that build golden image.
+
+2) Provisioner: By provisioner we are installing the software
+
+
+Access key and secret key
+===========================
+Access key and secret key are like username and password respectively
+
+Note: When you are creating the access key and secret key, you must be having admin access.
+
+How I can create access key and secret key
+============================================
+Please follow: https://k21academy.com/amazon-web-services/create-access-and-secret-keys-in-aws/
+
+Accesskey: 
+Secret key: Secret access key: 
+
+
+Installing terraform
+====================
+Step1) Go to killerkode, and create ubuntu server.
+
+Step2) Copy instruction to install terraform from below location
+https://developer.hashicorp.com/terraform/install
+
+
+wget -O- https://apt.releases.hashicorp.com/gpg | sudo gpg --dearmor -o /usr/share/keyrings/hashicorp-archive-keyring.gpg
+echo "deb [signed-by=/usr/share/keyrings/hashicorp-archive-keyring.gpg] https://apt.releases.hashicorp.com $(lsb_release -cs) main" | sudo tee /etc/apt/sources.list.d/hashicorp.list
+sudo apt update && sudo apt install terraform
+
+Installing packer
+=================
+Step1) Go to killerkode, and create ubuntu server.
+
+Step2) Copy instruction to install terraform from below location
+https://developer.hashicorp.com/packer/install
+
+wget -O- https://apt.releases.hashicorp.com/gpg | sudo gpg --dearmor -o /usr/share/keyrings/hashicorp-archive-keyring.gpg
+echo "deb [signed-by=/usr/share/keyrings/hashicorp-archive-keyring.gpg] https://apt.releases.hashicorp.com $(lsb_release -cs) main" | sudo tee /etc/apt/sources.list.d/hashicorp.list
+sudo apt update && sudo apt install packer
+
+
+Exacize: Creating ubuntu machine in AWS by terraform
+====================================================
+Follow: https://developer.hashicorp.com/terraform/tutorials/aws-get-started/aws-build
+
+export AWS_ACCESS_KEY_ID=
+
+export AWS_SECRET_ACCESS_KEY=
+
+
+Day1: How to write main.tf file
+      Terraform architecture with terraform init, validate, apply and destroy command
+
+Day2: statefile, backend and other useful terraform configuration
+
+Day3: Module, taint, workspace, null resources, provisioner in terraform
+
+Day4: Question answer session on terraform
+
+Packer json file
+================
+{
+    "variables":{
+        "secret" :"",
+        "access" : "",
+        "region" : "us-west-2",
+        "ami_name": "apache-from-packer"
+    },
+    "builders": [
+        {
+            "type": "amazon-ebs",
+           "access_key": "{{user `access`}}",
+           "secret_key": "{{user `secret`}}", 
+           "region": "{{user `region`}}",
+            "source_ami": "ami-f2d3638a",
+            "instance_type": "t2.micro",
+            "ssh_username": "ec2-user",
+            "ami_name": "{{user `ami_name`}}"
+          }
+    ],
+    "provisioners":[
+        {
+            "type": "shell",
+            "inline": [
+                "sudo yum install httpd -y",
+                "sudo service httpd start",
+                "sudo chkconfig httpd on"]
+          }
+    ]
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
