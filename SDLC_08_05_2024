@@ -1,0 +1,119 @@
+Application Engineering
+========================
+
+> SDLC
+> Design Thinking
+> DevOps Introduction
+
+Example: JanBask want to create on learning website where you can manage end to end learning.
+
+SDLC[Software development life cycle]: It's step by step process for designing the software. 
+Every software will expire in sometime.
+
+1) Plan    
+2) Code     
+3) Build      
+4) Test
+5) Release   
+6) Deploy   
+7) Operate
+8) Monitor
+
+Plan
+=====
+Requirement gathering+ Analysis[pre-work]+ Resource management
+
+Codding
+=======
+Here, Developer will write the code according to requirement.
+
+Build
+=====
+I want to add 2 number in python
+
+x = 50
+y = 10
+print(x + y)
+
+
+When developer is writing the code, he writes business logic. but we need to add presentation logic into it, this stage is known as build phase.
+
+Testing
+=======
+We just want to make sure things are working fine.
+
+These 4 phases are known as development phase.
+
+CMMI> The Capability Maturity Model Integration (CMMI) is a process and behavioral model that helps organizations streamline process improvement and encourage productive, efficient behaviors that decrease risks in software, product, and service development.
+
+CMMI is a way to rate organisation
+
+CMMI Level1
+CMMI Level2
+CMMI Level3
+CMMI Level4
+CMMI Level5
+
+Link: https://teamibr.com/capabilities/software-engineering/cmme-level-3-experienced
+
+In Software development we follow CMMI Level5. As per CMMI level5, we should test our product multiple times before delivering to customer,
+SO for that purpose we have multiple environment-
+
+1) Dev
+
+2) Test
+
+3) QA
+
+4) Preprod
+
+5) Prod
+
+Release: When I do deployment on any environment expert production.
+
+Deploy: When I do deployment in Production
+
+   >>Deployment<< Adding code to server
+          I want to make my E-learning code available over internet
+
+Operate: I need to do maintenance or do some activities.
+
+Monitor: My speed limit is 80KM/H> Speedmeter
+
+<<How to draw a Tiger>>
+=======================
+
+Developer mindset
+=================
+
+In IT industry Developer are pillar, because they are thinking for the application that they have never seen, and these people are 10 years ahead.
+
+ATM thinking        :1990
+ATM withdrawl Money: 2000
+
+Operator mindset
+================
+They just follow the instruction.[security guard]. Process oriented people
+
+
+Design thinking
+===============
+Before giving solution, understand the problem, and figureoout multiple solutions, and opt for the best.
+
+
+I want you to plan your travel from US to India
+1) you will think for Money part
+2) you need to plan number of days
+3) Process
+2) return journey
+
+Homework:
+========
+1) Design thinking: https://www.youtube.com/watch?v=_r0VX-aU_T8
+2) DevOps: https://www.youtube.com/watch?v=5VqXqtL0xQI&t=1s
+
+
+Tomorrow,
+Agile WOW
+Deployment stategy
+Testing and it's type
